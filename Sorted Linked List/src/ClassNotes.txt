@@ -1,0 +1,18 @@
+cmp head and val
+    if val < head.val
+        put val in front
+
+cmp tail and val
+    if tail.val < val
+        put val after tail
+
+cmp val and mid val
+    if val < mid.val
+        trav from head to node before mid
+            insert at appropriate index
+    if val > mid.val
+        trav from mid to node before tail
+            insert at appropriate index
+    if val = mid.val
+        insert after mid
+
