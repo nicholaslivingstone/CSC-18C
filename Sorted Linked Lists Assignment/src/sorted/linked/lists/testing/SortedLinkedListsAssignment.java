@@ -21,8 +21,14 @@ public class SortedLinkedListsAssignment {
         sortedList<Integer> myList = new sortedList<>(); 
         
         myList.insert(5);
-        myList.insert(6);
-        
+        myList.insert(10);
+        myList.insert(15);
         myList.print(); 
+        myList.deleteFront();
+        myList.print(); 
+        myList.deleteBack();
+        myList.print();
+        myList.deleteBack();
+        myList.print();
     }
 }
