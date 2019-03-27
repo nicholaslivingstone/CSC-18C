@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SortedLinkedListsAssignment",
+            "request": "launch",
+            "mainClass": "sorted.linked.lists.testing.SortedLinkedListsAssignment",
+            "projectName": "Sorted Linked Lists Assignment_6ea4eab0"
+        }
+    ]
+}
