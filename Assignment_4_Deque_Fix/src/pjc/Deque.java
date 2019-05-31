@@ -84,7 +84,12 @@ public class Deque<T> implements DequeInterface<T>
     public T pop_front()
     {
 	T headDataValue = null;
-	if ( numberOfItems > 0 )
+        if (numberOfItems == 1){
+            headDataValue = head.getValue();
+            head = tail = null; 
+            numberOfItems = 0;
+        }
+        else if ( numberOfItems > 0 )
 	{
             headDataValue = head.getValue();
             Node<T> oldHead=head;
@@ -102,14 +107,18 @@ public class Deque<T> implements DequeInterface<T>
     public T pop_back()
     {
 	T tailDataValue = null;
-	if ( numberOfItems > 0 )
+        if (numberOfItems == 1){
+            tailDataValue = tail.getValue();
+            head = tail = null; 
+            numberOfItems = 0;
+        }
+        else if ( numberOfItems > 0 )
 	{
             tailDataValue = tail.getValue();
             Node<T> oldTail=tail;
             tail=tail.getPrevious();
             tail.setNext(null);
             oldTail.setPrevious(null);
-
             numberOfItems--;
         }
         return tailDataValue;  // returns the data value from the popped tail, null if deque empty

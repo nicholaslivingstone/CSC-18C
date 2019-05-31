@@ -61,7 +61,7 @@ public class DequeDemo {
                 System.out.print("Enter a word: ");
                 String wd = new java.util.Scanner(System.in).next();
                 
-                words.push_front(wd);
+                words.push_back(wd);
                 
                 System.out.printf("The word '%s' pushed to back %n", wd);
                 System.out.printf("Deque has %d elements%n",words.size());
